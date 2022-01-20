@@ -9,12 +9,17 @@
   color: white;
   margin-top: 60px;
   margin-left: 300px;
+  border: 40px solid blue;
 }
 
 #card main #profile-image {
   height: 350px;
-  border-radius: 1000px;
+  width: 350px;
   border: 10px solid #8257e5;
   margin-left: 200px;
   margin-top: 100px;
+  clip-path: circle();
+  border-radius: 200px;
+  object-fit: cover;
+  border: 5px solid black;
 }
