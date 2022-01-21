@@ -63,8 +63,8 @@ section h2 {
 section img {
   position: absolute;
   right: 0;
-  width: 35%;
   margin-right: 60px;
+  z-index: -1;
 }
 
 footer #img-bottom img {
