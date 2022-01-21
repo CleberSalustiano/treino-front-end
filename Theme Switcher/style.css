@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+  transition: background 0.3s;
+}
+
+section#container {
+  display: inline-flex;
+  background: black;
+  margin-top: 40vh;
+  border-radius: 300px;
+  border: 4px solid black;
+  align-items: center;
+  gap: 30px;
+}
+#sun img,
+#moon img {
+  height: 94.15px;
+  width: 94.15px;
+}
+
+#white-circle {
+  position: absolute;
+  height: 86.31px;
+  width: 86.31px;
+  background: white;
+  border-radius: 3000px;
+  margin-left: 1px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#white-circle.night {
+  margin-left: 130px;
+}
+
+body.night {
+  background: #292c35;
+}
