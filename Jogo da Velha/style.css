@@ -75,8 +75,8 @@ section .container {
 section .container .button {
   font: 500 1.6rem sans-serif;
   color: white;
-  background-color: rgb(78, 119, 173);
-  padding: 1rem 3rem;
+  background-color: rgb(16, 68, 141);
+  padding: 1.5rem 4rem;
   border-radius: 0.8rem;
   transition: filter 0.4s;
 }
@@ -97,4 +97,8 @@ header {
 header div {
   font: 700 3.2rem sans-serif;
   color: rgb(33, 32, 41);
+}
+
+header div.winner {
+  color: rgb(37, 151, 98);
 }

@@ -27,6 +27,7 @@ function ganhou(playerCombination, player) {
       }
     })
   }
+  header.classList.add('winner')
   if (player == 'X') {
     header.textContent = 'Jogador 1 ganhou'
   } else {
@@ -104,6 +105,7 @@ spaces.forEach(space => {
     reset.addEventListener('click', e => {
       spaces.forEach(space => {
         space.classList.remove('block')
+        header.classList.remove('winner')
         space.classList.remove('winner')
         space.classList.remove('old')
         playerOneMoves = 0
