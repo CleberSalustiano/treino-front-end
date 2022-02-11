@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --background-game: rgb(78, 119, 173);
+  --background: rgb(177, 196, 221);
+  --text-color: white;
+  --background-block: rgb(33, 48, 68);
+  --background-winner: rgb(37, 151, 98);
+  --background-old: rgb(62, 67, 108);
+  --background-button: rgb(78, 119, 173);
+  --color-header: rgb(33, 32, 41);
+}
+main {
+  background-color: rgb(177, 196, 221);
+  height: 100vh;
+  padding-top: 15vh;
+}
+
+#game .container {
+  display: flex;
+}
+
+#game .container ul {
+  height: 70vh;
+  display: grid;
+  grid-template-areas:
+    '7 8 9'
+    '4 5 6'
+    '1 2 3';
+  gap: 1rem;
+  width: 80rem;
+}
+
+#game .container ul li {
+  background-color: rgb(78, 119, 173);
+  transition: filter 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 3.2rem sans-serif;
+  color: white;
+}
+
+#game .container ul li:hover {
+  cursor: pointer;
+  filter: brightness(1.15);
+}
+
+#game .container ul li.block {
+  cursor: default;
+  background-color: rgb(33, 48, 68);
+  transition: filter 2000s;
+}
+#game .container ul li.winner {
+  background-color: rgb(37, 151, 98);
+  cursor: default;
+}
+
+#game .container ul li.old {
+  background-color: rgb(62, 67, 108);
+}
+section .container {
+  margin-top: 2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+section .container .button {
+  font: 500 1.6rem sans-serif;
+  color: white;
+  background-color: rgb(78, 119, 173);
+  padding: 1rem 3rem;
+  border-radius: 0.8rem;
+  transition: filter 0.4s;
+}
+
+section .container .button:hover {
+  filter: brightness(1.15);
+}
+
+header {
+  position: absolute;
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header div {
+  font: 700 3.2rem sans-serif;
+  color: rgb(33, 32, 41);
+}
