@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: var(--page-background);
+  font-size: 62.5%;
+  --yellow: #ffcc29;
+  --blue: #1d539e;
+  --gray: #828799;
+  --page-background: #f9fbfc;
+}
+
+.container {
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+  position: absolute;
+  z-index: -1;
+  background-color: var(--blue);
+  width: 100vw;
+  height: 50%;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 8vh;
+}
+
+#header h2 {
+  font-weight: bold;
+  font-size: 4.8rem;
+  margin-bottom: 2rem;
+}
+
+#header p {
+  font-weight: normal;
+  font: 1.8rem;
+}
+
+#main .container {
+  display: flex;
+  justify-content: center;
+}
+
+#main .container > ul {
+  padding-top: 30vh;
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  width: 37rem;
+  height: 47rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: #828799 0px 0px 1px 0px;
+  position: relative;
+}
+
+.card header {
+  padding: 3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.card main {
+  padding: 0 3rem;
+}
+.card .value {
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.card .value > span {
+  font-size: 1.8rem;
+}
+
+.card .value > span > span {
+  color: var(--gray);
+  font-weight: normal;
+}
+
+.text {
+  color: var(--gray);
+  font-weight: 400;
+}
+
+.line {
+  width: 100%;
+  border: 0.5px solid #eeeeee;
+  margin: 2rem 0;
+}
+
+.card ul li {
+  margin-bottom: 1.2rem;
+}
+
+ul li {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--blue);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0;
+  position: absolute;
+  bottom: 3rem;
+  border: 1px solid var(--blue);
+  width: 29.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1d539e;
+  border-radius: 0.8rem;
+  transition: filter 0.3s;
+}
+
+.button:hover {
+  filter: brightness(1.15);
+}
+
+.card.popular {
+  height: 49rem;
+}
+
+.card.popular > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.8rem 0.8rem 0 0;
+  background-color: var(--yellow);
+  color: var(--blue);
+}
+
+.card.popular header > p {
+  background-color: var(--blue);
+  padding: 0.8rem 2.4rem;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+}
+
+.card.popular .button {
+  background-color: var(--blue);
+  color: white;
+  font-size: 2rem;
+}

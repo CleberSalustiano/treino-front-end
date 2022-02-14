@@ -16,6 +16,8 @@ const winningMoves = [
   ['7', '5', '3']
 ]
 
+let ganhouB = 0
+
 function ganhou(playerCombination, player) {
   for (let i = 0; i < playerCombination.length; i++) {
     const element = playerCombination[i]
@@ -26,12 +28,34 @@ function ganhou(playerCombination, player) {
         space.classList.add('block')
       }
     })
+    ganhouB = 1
   }
   header.classList.add('winner')
   if (player == 'X') {
     header.textContent = 'Jogador 1 ganhou'
   } else {
     header.textContent = 'Jogador 2 ganhou'
+  }
+}
+
+function comparation(playerCombination, result, player) {
+  if (playerCombination.length >= 3) {
+    for (const winningMove of winningMoves) {
+      for (const char of winningMove) {
+        for (let i = 0; i < playerCombination.length; i++) {
+          const element = playerCombination[i]
+          if (char == element) {
+            result++
+            if (result == 3) {
+              ganhou(winningMove, player)
+            }
+          } else {
+            continue
+          }
+        }
+      }
+      result = 0
+    }
   }
 }
 
@@ -58,44 +82,11 @@ spaces.forEach(space => {
 
     let result = 0
 
-    if (playerOneCombination.length >= 3) {
-      for (const winningMove of winningMoves) {
-        for (const char of winningMove) {
-          for (let i = 0; i < playerOneCombination.length; i++) {
-            const element = playerOneCombination[i]
-            if (char == element) {
-              result++
-              if (result == 3) {
-                ganhou(winningMove, 'X')
-              }
-            } else {
-              continue
-            }
-          }
-        }
-        result = 0
-      }
-    }
-    if (playerTwoCombination.length >= 3) {
-      for (const winningMove of winningMoves) {
-        for (const char of winningMove) {
-          for (let i = 0; i < playerTwoCombination.length; i++) {
-            const element = playerTwoCombination[i]
-            if (char == element) {
-              result++
-              if (result == 3) {
-                ganhou(winningMove, 'O')
-              }
-            } else {
-              continue
-            }
-          }
-        }
-        result = 0
-      }
-    }
+    comparation(playerOneCombination, result, 'X')
 
-    if (playerOneMoves + playerTwoMoves >= 9) {
+    comparation(playerTwoCombination, result, 'O')
+
+    if (playerOneMoves + playerTwoMoves >= 9 && ganhouB != 1) {
       header.textContent = 'Deu velha'
       spaces.forEach(space => {
         space.classList.add('old')
@@ -114,6 +105,7 @@ spaces.forEach(space => {
         playerTwoCombination = ''
         space.textContent = ''
         header.textContent = 'Jogador 1'
+        ganhouB = 0
       })
     })
   })
