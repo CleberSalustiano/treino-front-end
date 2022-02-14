@@ -93,7 +93,7 @@ spaces.forEach(space => {
       })
     }
 
-    reset.addEventListener('click', e => {
+    reset.addEventListener('click', () => {
       spaces.forEach(space => {
         space.classList.remove('block')
         header.classList.remove('winner')
