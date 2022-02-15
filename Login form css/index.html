@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="assets/logo.svg" />
+    </header>
+
+    <main>
+      <section id="login">
+        <div class="container">
+
+          <div>
+            <h2><img src="assets/log-in.svg" />Faça seu login</h2>
+            <p>Entre com suas informações de cadastro.</p>
+          </div>
+  
+          <div id="form">
+            <form action="#">
+              <label for="email">E-mail</label>
+              <fieldset>
+                <div>
+                  <img src="assets/mail.svg" />
+                  <input type="email" name="email" id="email" placeholder="Digite seu e-mail"/>
+                  <img src="assets/mail-focus.svg">
+                </div>
+              </fieldset>
+  
+              <label for=>Senha</label>
+              <fieldset >
+                <div>
+                  <img src="assets/lock.svg" />
+                  <input type="password" name="pass" class="pass" placeholder="Digite sua senha"/>
+                  <img src="assets/lock-focus.svg">
+                </div>
+                <img src="assets/eye.svg">
+              </fieldset>
+              <div>
+                <label for="check">
+                  <input type="checkbox" name="check" id="check" />
+                  <span></span>
+                  Lembre-me
+                </label>
+  
+                <a href="#">Esqueci minha senha</a>
+              </div>
+              <button>ENTRAR</button>
+            </form>
+            <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+          </div>
+        </div>
+      </section>
+      <section id="image"></section>
+    </main>
+  </body>
+</html>
