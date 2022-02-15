@@ -59,6 +59,22 @@ function comparation(playerCombination, result, player) {
   }
 }
 
+function resetButton() {
+  spaces.forEach(space => {
+    space.classList.remove('block')
+    header.classList.remove('winner')
+    space.classList.remove('winner')
+    space.classList.remove('old')
+    playerOneMoves = 0
+    playerTwoMoves = 0
+    playerOneCombination = ''
+    playerTwoCombination = ''
+    space.textContent = ''
+    header.textContent = 'Jogador 1'
+    ganhouB = 0
+  })
+}
+
 spaces.forEach(space => {
   space.addEventListener('click', () => {
     const isBlock = space.classList.value
@@ -76,8 +92,6 @@ spaces.forEach(space => {
 
     if (!isBlock) {
       space.classList.toggle('block')
-      // console.log(playerOneMoves)
-      // console.log(playerTwoMoves)
     }
 
     let result = 0
@@ -93,20 +107,6 @@ spaces.forEach(space => {
       })
     }
 
-    reset.addEventListener('click', () => {
-      spaces.forEach(space => {
-        space.classList.remove('block')
-        header.classList.remove('winner')
-        space.classList.remove('winner')
-        space.classList.remove('old')
-        playerOneMoves = 0
-        playerTwoMoves = 0
-        playerOneCombination = ''
-        playerTwoCombination = ''
-        space.textContent = ''
-        header.textContent = 'Jogador 1'
-        ganhouB = 0
-      })
-    })
+    reset.addEventListener('click', resetButton)
   })
 })
