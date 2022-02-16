@@ -1,0 +1,176 @@
+* {
+  font-size: 1.6rem;
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  overflow-x: hidden;
+}
+
+:root {
+  font-size: 62.5%;
+  --button: #ff0000;
+  --main-background: #c4c4c4;
+  --background: #e5e5e5;
+  --text: #000;
+  --footer: #000;
+  --text-description: #9c9696;
+}
+
+header {
+  display: flex;
+  padding-top: 4rem;
+  position: absolute;
+}
+
+header .container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container div {
+  display: flex;
+  gap: 11rem;
+}
+
+.container i {
+  margin-left: 6rem;
+}
+
+.container nav ul {
+  display: flex;
+  gap: 9rem;
+}
+
+.container nav ul li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.container img:last-child {
+  margin-right: 6rem;
+}
+
+.container fieldset {
+  background-color: white;
+  display: flex;
+  width: 22rem;
+  height: 4rem;
+  padding: 1rem;
+  border: none;
+}
+
+.container fieldset input {
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.container fieldset input::placeholder {
+  font: 400 'Roboto', sans-serif;
+}
+
+.container fieldset input:focus {
+  border: none;
+  outline: 0;
+}
+
+main {
+  width: 100vw;
+  background-color: var(--background);
+  display: grid;
+  grid-template-columns: 35% 1fr;
+}
+
+#gray-background {
+  background-color: var(--main-background);
+}
+
+main #title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main #title .container {
+  overflow-y: hidden;
+  width: 35.7rem;
+  height: 53.3rem;
+}
+
+main #title .container > h2 {
+  font: 700 6rem 'Roboto', sans-serif;
+  margin-bottom: 2.1rem;
+}
+
+main #title .container > p {
+  font: 400 1.6rem 'Roboto', sans-serif;
+  color: var(--text-description);
+  margin-bottom: 2.1rem;
+}
+
+.price {
+  font: 700 4rem 'Roboto', sans-serif;
+  margin-bottom: 4rem;
+}
+
+.button {
+  margin-top: 10rem;
+  padding: 3.3rem 7.5rem;
+  background-color: red;
+  color: white;
+  font: 700 2.4rem 'Roboto', sans-serif;
+}
+
+main #photos .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 17rem;
+  align-items: center;
+}
+
+main #photos .container > img {
+  width: 60rem;
+}
+
+main #photos .container > div {
+  display: flex;
+  gap: 3.7rem;
+  margin-bottom: 4rem;
+  margin-left: 2rem;
+}
+
+footer {
+  display: flex;
+  height: 16.6rem;
+  align-items: center;
+  width: 100vw;
+  background-color: var(--background);
+}
+
+footer nav ul {
+  font: 700 1.8rem 'Roboto', sans-serif;
+  margin-left: 4.7rem;
+  margin-right: 8rem;
+  display: flex;
+  gap: 9rem;
+}
+
+ul li:hover {
+  cursor: pointer;
+}
+
+footer a {
+  font: 700 2.4rem 'Roboto', sans-serif;
+
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16.6rem;
+  background-color: black;
+  color: white;
+  width: 43.7rem;
+}
