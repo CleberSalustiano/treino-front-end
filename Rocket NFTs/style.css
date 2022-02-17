@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.6rem;
+  color: white;
+}
+
+:root {
+  font-size: 62.5%;
+  --body-background: #0e0e0e;
+  --color-logo: #ff5b50;
+  --card-color: #252525;
+  --text-color: #fff;
+  --subtitle-color: #5a5757;
+  --black-text: #000;
+  --color-input: #0d0d0d;
+}
+
+.container {
+  width: 127.7rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  color: white;
+  width: 100%;
+}
+
+header .container {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 6rem;
+}
+
+header nav ul li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+}
+
+header nav ul li:hover {
+  cursor: pointer;
+}
+
+header .container div:last-child {
+  display: flex;
+  width: 23rem;
+  height: 5rem;
+  padding: 1.4rem 1rem;
+  gap: 1.5rem;
+  background-color: white;
+  justify-content: center;
+}
+
+header .container div:last-child:hover {
+  cursor: pointer;
+}
+
+header .container div:last-child h3 {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+main {
+  background-color: var(--body-background);
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+}
+
+#destaque {
+  padding-top: 20rem;
+  background-image: url('assets/background.png');
+  background-size: cover;
+}
+
+#title-page {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+#title-page .container {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  gap: 4rem;
+}
+
+#title-page .container div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+}
+
+#title-page .container div:first-child > p {
+  font-size: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+#title-page .container div:first-child > div {
+  display: flex;
+  align-items: flex-end;
+}
+
+#title-page .container > div:nth-child(2) h2 {
+  font-size: 5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+#title-page .container > div:nth-child(2) h2 span {
+  font-size: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-logo);
+}
+
+#galery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#galery div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 6rem;
+}
+
+#galery div > img {
+  border: 1px solid var(--text-color);
+}
+
+#vendas {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas:
+    'number comment comment '
+    'number img img';
+}
+
+#numbers {
+  grid-area: number;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7rem;
+  padding-right: 6.7rem;
+  border-right: 1px solid var(--subtitle-color);
+}
+
+#numbers div > span {
+  font: 600 5rem 'Montserrat', sans-serif;
+}
+#numbers div > p {
+  font: 600 2rem 'Montserrat', sans-serif;
+  color: var(--subtitle-color);
+}
+
+#comments {
+  grid-area: comment;
+  display: flex;
+  width: 95.2rem;
+  height: 21.4rem;
+  margin: 7rem;
+  gap: 12rem;
+}
+
+.comment p {
+  font: 400 1.8rem 'Montserrat', sans-serif;
+  margin-bottom: 6.3rem;
+}
+
+.comment p > span {
+  color: var(--color-logo);
+}
+
+.comment p:last-child {
+  text-decoration: underline;
+}
+#first-banner {
+  position: relative;
+}
+
+#first-banner img {
+  display: flex;
+  width: 80vw;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  border: 1px solid var(--subtitle-color);
+}
