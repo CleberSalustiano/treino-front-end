@@ -128,6 +128,15 @@ footer {
   color: var(--color-logo);
 }
 
+#title-page .container div:nth-child(2) > p {
+  font: 400 1.8rem 'Montserrat', sans-serif;
+}
+
+#title-page .container div:nth-child(2) > p:first-child {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
 #galery {
   width: 100%;
 }
@@ -166,6 +175,7 @@ footer {
 #numbers div > p {
   font: 600 2rem 'Montserrat', sans-serif;
   color: var(--subtitle-color);
+  text-align: center;
 }
 
 #comments {
