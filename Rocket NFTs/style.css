@@ -167,6 +167,7 @@ footer {
   gap: 7rem;
   padding-right: 6.7rem;
   border-right: 1px solid var(--subtitle-color);
+  text-align: center;
 }
 
 #numbers div > span {
@@ -175,7 +176,6 @@ footer {
 #numbers div > p {
   font: 600 2rem 'Montserrat', sans-serif;
   color: var(--subtitle-color);
-  text-align: center;
 }
 
 #comments {
