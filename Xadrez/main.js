@@ -1,19 +1,27 @@
 let game = document.querySelectorAll('ul[id]')
+let isPartIdToken = false
+let partplay
+
+function playTime(part) {
+  console.log(part)
+}
 
 game.forEach(id => {
   let whitePart = id.querySelectorAll('.white')
-  whitePart.forEach(part => {
+  partplay = whitePart.forEach(part => {
     part.classList.forEach(partClass => {
       if (partClass === 'token') {
       }
     })
     part.addEventListener('click', () => {
-      if (part.id === 'token') {
-        console.log('arroz')
-      } else part.classList.value === 'pawn white'
-      {
+      if (isPartIdToken !== true) {
         part.id = 'token'
+        isPartIdToken = true
+        playTime(part)
       }
     })
+    if (partplay != undefined) {
+      return partplay
+    }
   })
 })
