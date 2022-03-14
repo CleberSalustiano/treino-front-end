@@ -61,7 +61,7 @@ ul li {
   background-color: white;
 }
 
-ul li[class]:hover {
+ul li > div[class]:hover {
   cursor: pointer;
 }
 
@@ -76,6 +76,6 @@ ul li[class]:hover {
     1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 
-li[class]#token {
-  background-color: greenyellow;
+li[class]#focus {
+  background-color: rgb(91, 190, 116);
 }
