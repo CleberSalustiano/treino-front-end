@@ -38,20 +38,16 @@ function get() {
 }
 
 function movimentPart(part, parts) {
+  get()
   if (
     part.classList.value.split(' ')[0] == 'pawn' &&
     part.classList.value.split(' ')[1] == 'white'
   ) {
-    let isFind = []
-    parts.forEach(partFind => {
-      if (partFind.classList.value === part.classList.value) {
-        isFind.push(true)
-      } else {
-        isFind.push(false)
-      }
-    })
+    let index
+    let bool = false
+    let keyImportant = ''
 
-    console.log(isFind)
+    console.log(keyImportant)
   }
 }
 
