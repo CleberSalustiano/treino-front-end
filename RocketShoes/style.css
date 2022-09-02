@@ -128,10 +128,11 @@ main #photos .container {
   flex-direction: column;
   padding-top: 17rem;
   align-items: center;
+  height: 100vh;
 }
 
 main #photos .container > img {
-  width: 60rem;
+  width: 45rem;
 }
 
 main #photos .container > div {
@@ -173,4 +174,8 @@ footer a {
   background-color: black;
   color: white;
   width: 43.7rem;
+}
+
+main #photos {
+  height: calc(100vh);
 }
